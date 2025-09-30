@@ -1,0 +1,14 @@
+
+version: '3.8'
+
+services:
+  pest-detection:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - ./datasets:/app/datasets
+      - ./ai_model:/app/ai_model
+    restart: unless-stopped

@@ -1,0 +1,81 @@
+{
+  "ai_model": {
+    "model_path": "ai_model/best.pt",
+    "confidence_threshold": 0.5,
+    "iou_threshold": 0.45,
+    "input_size": 640,
+    "batch_size": 1
+  },
+  "iot_system": {
+    "relay_pins": [18, 19, 20, 21],
+    "motor_pins": {
+      "stepper": [14, 15, 16, 17],
+      "servo": 12
+    },
+    "sensors": {
+      "temperature": {
+        "type": "temperature",
+        "unit": "°C",
+        "interval": 5,
+        "pin": 4
+      },
+      "humidity": {
+        "type": "humidity",
+        "unit": "%",
+        "interval": 5,
+        "pin": 17
+      },
+      "soil_moisture": {
+        "type": "soil_moisture",
+        "unit": "%",
+        "interval": 10,
+        "pin": 27
+      },
+      "light": {
+        "type": "light",
+        "unit": "lux",
+        "interval": 5,
+        "pin": 22
+      }
+    },
+    "pest_thresholds": {
+      "high_risk": 0.8,
+      "medium_risk": 0.5,
+      "low_risk": 0.3
+    }
+  },
+  "web_dashboard": {
+    "host": "0.0.0.0",
+    "port": 8000,
+    "reload": false,
+    "cors_origins": ["*"]
+  },
+  "detection": {
+    "auto_detection_interval": 30,
+    "camera_id": 0,
+    "enable_auto_response": true,
+    "save_detections": true,
+    "detection_output_dir": "detections"
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "pest_detection.log",
+    "max_size": "10MB",
+    "backup_count": 5
+  },
+  "notifications": {
+    "email": {
+      "enabled": false,
+      "smtp_server": "smtp.gmail.com",
+      "smtp_port": 587,
+      "username": "",
+      "password": "",
+      "recipients": []
+    },
+    "webhook": {
+      "enabled": false,
+      "url": "",
+      "timeout": 30
+    }
+  }
+}

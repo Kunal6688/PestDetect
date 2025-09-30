@@ -1,0 +1,26 @@
+# Pest Detection Dataset Configuration
+# Update these paths to match your dataset structure
+
+# Dataset paths
+train: datasets/pest_dataset/images/train/
+val: datasets/pest_dataset/images/val/
+test: datasets/pest_dataset/images/test/  # optional
+
+# Number of classes
+nc: 10
+
+# Class names (must match the order in your label files)
+names:
+  0: aphid
+  1: whitefly
+  2: thrips
+  3: mite
+  4: caterpillar
+  5: beetle
+  6: grasshopper
+  7: leafhopper
+  8: scale_insect
+  9: mealybug
+
+# Additional configuration
+path: datasets/pest_dataset  # dataset root dir

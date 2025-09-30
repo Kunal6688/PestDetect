@@ -1,0 +1,22 @@
+{
+  "detection_history": [
+    {
+      "timestamp": "2024-09-30 10:30:00",
+      "pest_type": "Aphid",
+      "confidence": 0.87,
+      "image_name": "demo_aphid.jpg"
+    },
+    {
+      "timestamp": "2024-09-30 11:15:00",
+      "pest_type": "Whitefly",
+      "confidence": 0.73,
+      "image_name": "demo_whitefly.jpg"
+    },
+    {
+      "timestamp": "2024-09-30 12:00:00",
+      "pest_type": "Caterpillar",
+      "confidence": 0.91,
+      "image_name": "demo_caterpillar.jpg"
+    }
+  ]
+}
