@@ -5,7 +5,6 @@ A simple web interface for pest detection and monitoring
 """
 
 import streamlit as st
-import cv2
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -18,6 +17,15 @@ from datetime import datetime, timedelta
 import plotly.express as px
 import plotly.graph_objects as go
 from pathlib import Path
+
+# Handle OpenCV import gracefully for Streamlit Cloud
+try:
+    import cv2
+    CV2_AVAILABLE = True
+except ImportError:
+    CV2_AVAILABLE = False
+    st.warning(
+        "⚠️ OpenCV not available in this environment. Some image processing features may be limited.")
 import sys
 import os
 
